@@ -40,6 +40,8 @@ Post 2 wins (82/100). Here's why. Here's what to fix.
 
 **Requirements:** Python 3.10+ (3.12 recommended) | One API key (free tier available)
 
+> **Text posts only.** Scores written content for LinkedIn and Threads. No image or video scoring.
+
 ---
 
 ## Onboarding — Build Your Audience First

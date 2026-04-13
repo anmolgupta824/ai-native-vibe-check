@@ -346,6 +346,7 @@ def _print_audience_preview(audience: dict):
 def run_init():
     """Main entry point for `vibe-check init`."""
     print("\n🎯 Welcome to Vibe Check — AI Focus Group for Content Creators")
+    print("Scores text posts only (LinkedIn, Threads). No images or video.")
     print("Let's build your audience in 2 minutes.")
     _hr()
 
