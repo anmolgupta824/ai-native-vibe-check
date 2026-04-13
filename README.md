@@ -1,12 +1,32 @@
-# 🎯 AI Vibe Check
+<p align="center">
+  <h1 align="center">AI-Native Vibe Check</h1>
+  <p align="center">
+    AI focus group for content creators. Simulate how your audience reacts to your post — before you publish. Get a winner in 2 minutes.
+  </p>
+</p>
 
-> AI focus group for content creators. 80 simulated personas score your posts before you publish.
+<p align="center">
+  <a href="https://github.com/anmolgupta824/ai-native-vibe-check/stargazers"><img src="https://img.shields.io/github/stars/anmolgupta824/ai-native-vibe-check?style=for-the-badge&color=yellow" alt="Stars"></a>
+  <a href="https://github.com/anmolgupta824/ai-native-vibe-check/network/members"><img src="https://img.shields.io/github/forks/anmolgupta824/ai-native-vibe-check?style=for-the-badge" alt="Forks"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue?style=for-the-badge" alt="License"></a>
+  <a href="https://github.com/anmolgupta824/ai-native-vibe-check/issues"><img src="https://img.shields.io/github/issues/anmolgupta824/ai-native-vibe-check?style=for-the-badge" alt="Issues"></a>
+</p>
 
-**The problem:** You write 3 LinkedIn drafts. You pick one based on gut. It flops. The one you killed would've gone viral.
+<p align="center">
+  <b>Your audience. Simulated. Brutally honest.</b>
+  <br/>
+  <i>Works with OpenRouter, OpenAI, Anthropic, Groq, Gemini — bring your own key</i>
+  <br/><br/>
+  <a href="https://github.com/anmolgupta824/ai-native-vibe-check/stargazers"><img src="https://img.shields.io/badge/Like%20this%3F-Give%20it%20a%20%E2%AD%90-yellow?style=for-the-badge" alt="Star this repo"></a>
+</p>
 
-**The fix:** Run your drafts through 80 simulated personas. Get a winner in 2 minutes. Post with confidence.
+---
 
-## How It Works
+## The problem
+
+You write 3 LinkedIn drafts. You pick one based on gut. It flops. The one you killed would've gone viral.
+
+**The fix:** Run your drafts through simulated personas. Get a winner in 2 minutes. Post with confidence.
 
 ```
 You write 3 drafts
@@ -18,49 +38,100 @@ vibe-check battle --platform linkedin drafts/
 Post 2 wins (82/100). Here's why. Here's what to fix.
 ```
 
-**Requirements:** Python 3.10+ (3.12 recommended) | One API key (OpenRouter, OpenAI, or any LLM provider)
+**Requirements:** Python 3.10+ (3.12 recommended) | One API key (free tier available)
 
-If this saves you from posting a flop, consider giving it a ⭐
+---
+
+## Onboarding — Build Your Audience First
+
+Before running any battle, you need an audience. Run `vibe-check init` once. It takes 2 minutes.
+
+```bash
+$ vibe-check init
+
+🎯 Welcome to Vibe Check — AI Focus Group for Content Creators
+Let's build your audience in 2 minutes.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📱 Which platform are you posting on?
+  1. LinkedIn
+  2. Threads
+  3. Both
+> 1
+
+✍️  What type of content do you usually post?
+> AI tools and agents for developers
+
+👥 Describe your target audience in 1-2 sentences.
+> Senior engineers, CTOs, and indie hackers who build with AI.
+  Skeptical of hype, value working demos, share content that saves them time.
+
+🔢 How many personas?
+  1. 20  — Quick gut check (~15 sec)
+  2. 50  — Standard focus group (~45 sec)
+  3. 100 — Deep analysis (~90 sec)
+> 2
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔑  Almost done. Which AI provider do you have a key for?
+  1. OpenRouter  ← Recommended (free tier available)
+  2. OpenAI
+  3. Anthropic
+  4. Groq (free)
+> 1
+
+✅ Key saved. Testing connection... Connected ✓
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🧠 Generating 50 custom personas for your audience...
+
+✅ 50 personas across 12 segments
+
+Preview:
+  - Senior Engineer (12) — skeptical, values depth, shares proven tools
+  - Indie Hacker (8) — action-oriented, clones repos immediately
+  - CTO / VP Eng (6) — high signal bar, rarely comments, reshares selectively
+  - AI Researcher (5) — technical, follows papers, corrects wrong claims
+  - DevRel / Advocate (5) — amplifier, quote-posts with commentary
+  - ... 7 more segments
+
+🚀 Ready. Run your first battle:
+   vibe-check battle --platform linkedin posts/
+```
+
+Your custom audience is saved to `audiences/` (gitignored — never committed). After init, no `--audience` flag needed.
+
+---
 
 ## Quick Start
 
 ```bash
-git clone https://github.com/anmolgupta824/ai-vibe-check.git
-cd ai-vibe-check
+git clone https://github.com/anmolgupta824/ai-native-vibe-check.git
+cd ai-native-vibe-check
 pip install -e .
 vibe-check init
 ```
 
-`vibe-check init` walks you through 5 questions, validates your API key, and generates a custom audience tailored to your platform and content type. Takes ~2 minutes. No JSON editing.
-
 Then run your first battle:
 
 ```bash
-vibe-check battle --platform linkedin examples/posts/
+vibe-check battle --platform linkedin examples/posts/linkedin-sample.txt examples/posts/threads-sample.txt
 ```
 
-**AI-first (optional):** Open the repo in Claude Code and say: *"Vibe check these 3 drafts for LinkedIn"*
+**AI-first (optional):** Open in Claude Code, Cursor, or Windsurf and say: *"Vibe check these 3 drafts for LinkedIn"*
 
-## Try it now (no setup)
+---
 
-No API key needed to see how it works:
+## Try it now (no API key needed)
 
 ```bash
-# See how it works without an API key
 vibe-check battle --dry-run examples/posts/linkedin-sample.txt examples/posts/threads-sample.txt
 ```
 
-## Cost
-
-80 agents scoring 3 posts = 240 API calls.
-
-| Model | Per battle | Monthly (20 battles) | Time |
-|-------|-----------|---------------------|------|
-| Free (Qwen 72B) | $0 | $0 | ~12 min |
-| GPT-4o-mini | $0.05 | $1.00 | ~1.5 min |
-| Claude Haiku | $0.08 | $1.60 | ~1.5 min |
-
-→ Full breakdown: [docs/cost-guide.md](docs/cost-guide.md)
+---
 
 ## Three Modes
 
@@ -72,7 +143,7 @@ vibe-check battle --platform linkedin draft1.txt draft2.txt draft3.txt
 
 ```
 ⚔️  VIBE CHECK — BATTLE MODE
-Platform: LinkedIn | Audience: Tech LinkedIn (80 personas)
+Platform: LinkedIn | Audience: Custom LinkedIn — AI/Dev (50 personas)
 ──────────────────────────────────────────────────
 
 🏆 WINNER: draft2.txt
@@ -91,114 +162,95 @@ Platform: LinkedIn | Audience: Tech LinkedIn (80 personas)
 
 ```bash
 vibe-check hooks --platform linkedin --post winner.txt \
-  --hook "I built a digest agent for $0.006/run" \
+  --hook "I built a digest agent for \$0.006/run" \
   --hook "90 articles in, 25 out. My AI curator never sleeps" \
   --hook "Stop reading newsletters. Build one that reads for you"
 ```
 
-### 3. Interview — Why did people scroll past?
+### 3. Interview — Why did they scroll past?
 
 ```bash
-# Ask the scrollers what would make them stop
 vibe-check interview --last --filter scroll_past
-
-# Ask CTOs a specific question
 vibe-check interview --last --segment "CTO" --ask "Would you share this?"
 ```
 
-## Supported Platforms
+---
 
-| Platform | Default Audience | Config |
-|----------|-----------------|--------|
-| LinkedIn | Tech audience (80 personas) | `config/audiences/linkedin-tech.json` |
-| Threads | Broad AI audience (80 personas) | `config/audiences/threads-broad-ai.json` |
-| Custom | Your audience | Run `vibe-check init` or edit manually |
+## Cost
 
-## Supported LLM Providers
+80 agents scoring 3 posts = 240 API calls.
 
-Uses [LiteLLM](https://github.com/BerriAI/litellm) — one dependency handles everything.
+| Model | Per battle | Monthly (20 battles) | Time |
+|-------|-----------|---------------------|------|
+| Free (Qwen 72B via OpenRouter) | $0 | $0 | ~12 min |
+| GPT-4o-mini | ~$0.05 | ~$1.00 | ~1.5 min |
+| Claude Haiku | ~$0.08 | ~$1.60 | ~1.5 min |
 
-| Provider | Model | Cost per battle |
-|----------|-------|----------------|
-| OpenRouter (free tier) | Qwen 2.5 72B | $0 |
-| OpenAI | GPT-4o-mini | ~$0.01 |
-| Anthropic | Claude Haiku | ~$0.02 |
-| Ollama (local) | Qwen 32B | $0 |
-| Groq (free) | Llama 3.3 70B | $0 |
+→ Full breakdown: [docs/cost-guide.md](docs/cost-guide.md)
 
-```bash
-# Use presets
-vibe-check battle --preset free --platform linkedin posts/      # Free models
-vibe-check battle --preset quality --platform linkedin posts/   # Best models
-vibe-check battle --preset local --platform linkedin posts/     # Ollama
+---
 
-# Or specify directly
-vibe-check battle --model "ollama/qwen2.5:32b" --platform linkedin posts/
-```
+## Supported Providers
 
-## Create Your Own Audience
+Uses [LiteLLM](https://github.com/BerriAI/litellm) — one dependency, any model.
 
-The easiest way:
+| Provider | Free Tier | Get Key |
+|----------|-----------|---------|
+| OpenRouter | ✅ Yes | https://openrouter.ai/keys |
+| OpenAI | ❌ | https://platform.openai.com/api-keys |
+| Anthropic | ❌ | https://console.anthropic.com/keys |
+| Groq | ✅ Yes | https://console.groq.com/keys |
+| Gemini | ✅ Yes | https://aistudio.google.com/apikey |
 
 ```bash
-vibe-check init   # Generates custom-{platform}.json automatically
+vibe-check battle --preset free posts/     # Free models only
+vibe-check battle --preset quality posts/  # Best models
+vibe-check battle --preset local posts/    # Ollama (fully local)
 ```
 
-Or regenerate with a different count:
-
-```bash
-vibe-check regenerate --audience audiences/custom-linkedin.json --count 100
-```
-
-Manual editing is still supported — see `config/audiences/README.md` for the schema.
-
-## Track Accuracy
-
-After posting, log your actual results:
-
-```bash
-vibe-check log-outcome --posted draft2.txt --impressions 7200 --likes 89 --saves 49
-```
-
-After 10+ logged outcomes:
-
-```bash
-vibe-check stats
-```
+---
 
 ## All Commands
 
-```bash
-vibe-check init                           # First-time setup (guided)
-vibe-check regenerate --audience X        # Regenerate audience with new settings
-vibe-check battle [posts...]              # Compare 2-5 drafts
-vibe-check hooks --post X --hook A --hook B  # Test opening lines
-vibe-check score [post]                   # Score single post
-vibe-check interview --last               # Follow up with personas
-vibe-check generate-personas              # Regenerate persona pool
-vibe-check log-outcome                    # Log real performance
-vibe-check stats                          # Accuracy dashboard
-```
+| Command | What it does |
+|---------|-------------|
+| `vibe-check init` | First-time setup — build your custom audience |
+| `vibe-check regenerate` | Regenerate audience with new settings |
+| `vibe-check battle` | Compare 2-5 post drafts, pick a winner |
+| `vibe-check score` | Score a single post |
+| `vibe-check hooks` | Test hook variants for the same post |
+| `vibe-check interview` | Ask personas why they scrolled, shared, or saved |
+| `vibe-check log-outcome` | Log real impressions/likes after posting |
+| `vibe-check stats` | Accuracy report — swarm vs reality |
+
+---
 
 ## Common Flags
 
 | Flag | Description |
 |------|-------------|
 | `--platform` | `linkedin` or `threads` (default: linkedin) |
-| `--audience` | Path to custom audience JSON |
-| `--model` | Override LLM model |
+| `--audience` | Override audience path |
+| `--agents` | Override persona count (20=quick, 80=default) |
 | `--preset` | `free`, `cheap`, `quality`, or `local` |
-| `--agents` | Override persona count (20=quick, 80=default, 500=deep) |
-| `--dry-run` | Estimate cost without running |
+| `--dry-run` | Estimate cost, no API key needed |
+| `--no-share` | Skip share card prompt |
+
+---
 
 ## AI-First Setup
 
-This repo includes context files for AI coding assistants:
-- `CLAUDE.md` — Claude Code
-- `AGENTS.md` — Cursor / Copilot / Windsurf
-- `GEMINI.md` — Gemini
+This repo includes context files for every major AI coding tool:
+
+| File | For |
+|------|-----|
+| `CLAUDE.md` | Claude Code |
+| `AGENTS.md` | Cursor, Copilot, Windsurf |
+| `GEMINI.md` | Gemini CLI |
 
 Open the repo in your AI editor and say: *"Vibe check these 3 drafts for LinkedIn"*
+
+---
 
 ## License
 
