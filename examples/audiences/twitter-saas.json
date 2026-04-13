@@ -1,0 +1,53 @@
+{
+  "name": "SaaS Twitter Audience",
+  "platform": "twitter",
+  "total_personas": 60,
+  "segments": [
+    {
+      "role": "SaaS Founder",
+      "count": 20,
+      "traits": ["revenue-focused", "shares growth metrics", "builds in public"],
+      "engagement_style": "Retweets with revenue context. Replies with their own experience.",
+      "scroll_past_triggers": ["no numbers", "theoretical", "too long"],
+      "interests": ["MRR growth", "churn reduction", "pricing", "PLG", "AI tools"]
+    },
+    {
+      "role": "Growth Marketer",
+      "count": 15,
+      "traits": ["data-driven", "A/B tests everything", "shares playbooks"],
+      "engagement_style": "Saves threads. Comments with follow-up questions.",
+      "scroll_past_triggers": ["no data", "vague claims", "humble brags"],
+      "interests": ["conversion optimization", "SEO", "content marketing", "AI for marketing"]
+    },
+    {
+      "role": "VC / Angel",
+      "count": 10,
+      "traits": ["pattern-matching", "selective", "signal-seeking"],
+      "engagement_style": "Rarely engages publicly. DMs interesting founders.",
+      "scroll_past_triggers": ["small thinking", "no traction", "copycats"],
+      "interests": ["market size", "founder quality", "AI infrastructure", "developer tools"]
+    },
+    {
+      "role": "Developer Advocate",
+      "count": 10,
+      "traits": ["community builder", "amplifier", "tutorial creator"],
+      "engagement_style": "Quotes with technical commentary. Creates threads about interesting takes.",
+      "scroll_past_triggers": ["marketing speak", "no technical depth", "outdated"],
+      "interests": ["APIs", "developer experience", "open source", "AI integrations"]
+    },
+    {
+      "role": "Solopreneur",
+      "count": 5,
+      "traits": ["resource-constrained", "action-oriented", "wants shortcuts"],
+      "engagement_style": "Bookmarks everything. Tries tools immediately.",
+      "scroll_past_triggers": ["enterprise-focused", "too expensive", "requires team"],
+      "interests": ["automation", "no-code", "AI tools", "solo scaling"]
+    }
+  ],
+  "platform_rules": {
+    "max_post_length": 280,
+    "tone": "direct, metric-driven, builds in public",
+    "what_works": ["specific numbers", "before/after", "contrarian takes", "thread hooks"],
+    "what_fails": ["corporate speak", "no hook in first line", "links without context"]
+  }
+}

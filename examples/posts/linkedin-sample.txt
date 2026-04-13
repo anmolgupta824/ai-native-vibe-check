@@ -1,0 +1,20 @@
+I built an AI agent that reads 90 articles and picks the 25 worth reading.
+
+Cost: $0.006 per run.
+
+Here's exactly how it works:
+
+1. Scrapes 5 sources (HN, Product Hunt, GitHub trending, RSS feeds, web search)
+2. AI scores each article on relevance + quality
+3. Generates a personalized digest with TL;DRs
+4. Emails it to you every morning
+
+The entire pipeline runs in 3 minutes.
+
+I built it because I was spending 45 minutes every morning reading newsletters. Now I spend 5 minutes reading the digest and 0 minutes feeling guilty about unread tabs.
+
+Stack: TypeScript, OpenRouter (GPT-4o-mini for scoring, Claude for summaries), Supabase, Resend.
+
+Open-sourced it today. Link in comments.
+
+What's your morning information diet look like?

@@ -1,0 +1,35 @@
+# Personal data (not for public)
+results/
+backtest/
+
+# User-generated audiences (created by vibe-check init)
+audiences/*
+!audiences/.gitkeep
+
+# Generated personas (regenerate with vibe-check generate-personas)
+personas/generated/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Environment
+.env
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db

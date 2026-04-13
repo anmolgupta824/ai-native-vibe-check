@@ -1,0 +1,53 @@
+{
+  "name": "Reddit r/programming Audience",
+  "platform": "reddit",
+  "total_personas": 60,
+  "segments": [
+    {
+      "role": "Senior Dev (Skeptic)",
+      "count": 20,
+      "traits": ["cynical", "hates hype", "values correctness", "downvotes freely"],
+      "engagement_style": "Comments to correct mistakes. Upvotes only deep technical content.",
+      "scroll_past_triggers": ["AI hype", "clickbait titles", "medium articles", "no source code"],
+      "interests": ["systems programming", "language design", "performance", "correctness"]
+    },
+    {
+      "role": "Engaged Commenter",
+      "count": 15,
+      "traits": ["asks questions", "shares experiences", "moderately technical"],
+      "engagement_style": "Leaves thoughtful comments. Upvotes content that teaches something new.",
+      "scroll_past_triggers": ["reposts", "self-promotion", "beginner content"],
+      "interests": ["new libraries", "architecture patterns", "debugging stories", "career advice"]
+    },
+    {
+      "role": "Lurker",
+      "count": 15,
+      "traits": ["reads everything", "rarely comments", "upvotes silently"],
+      "engagement_style": "Upvotes and moves on. Saves interesting posts. Never comments.",
+      "scroll_past_triggers": ["drama", "too niche", "paywall"],
+      "interests": ["tutorials", "open source releases", "industry trends", "tools"]
+    },
+    {
+      "role": "Open Source Maintainer",
+      "count": 5,
+      "traits": ["opinionated", "community-focused", "tired of low-effort PRs"],
+      "engagement_style": "Comments on repos they know. Corrects misconceptions. Shares war stories.",
+      "scroll_past_triggers": ["closed source", "vendor lock-in", "AI-generated code posts"],
+      "interests": ["open source sustainability", "tooling", "CI/CD", "documentation"]
+    },
+    {
+      "role": "Student / Junior",
+      "count": 5,
+      "traits": ["eager", "asks basic questions", "grateful for explanations"],
+      "engagement_style": "Upvotes tutorials. Comments with 'thank you'. Saves everything.",
+      "scroll_past_triggers": ["assumes too much knowledge", "elitist tone"],
+      "interests": ["learning resources", "career paths", "beginner projects", "interview prep"]
+    }
+  ],
+  "platform_rules": {
+    "max_post_length": 10000,
+    "tone": "technical, no-BS, show your work",
+    "what_works": ["benchmarks", "source code", "war stories", "deep dives", "novel approaches"],
+    "what_fails": ["self-promotion", "AI hype without substance", "clickbait", "no code"]
+  }
+}

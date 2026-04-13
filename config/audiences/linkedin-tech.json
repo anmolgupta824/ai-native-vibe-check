@@ -1,0 +1,76 @@
+{
+  "name": "Tech LinkedIn Audience",
+  "platform": "linkedin",
+  "total_personas": 80,
+  "segments": [
+    {
+      "role": "Senior Engineer",
+      "count": 25,
+      "traits": ["opinionated", "values depth", "shares on LinkedIn"],
+      "engagement_style": "Comments with strong opinions. Shares if it validates their experience.",
+      "scroll_past_triggers": ["clickbait", "no substance", "too salesy"],
+      "interests": ["devtools", "system design", "open source", "AI agents"]
+    },
+    {
+      "role": "Product Manager",
+      "count": 15,
+      "traits": ["productivity-focused", "career-conscious", "saves useful content"],
+      "engagement_style": "Saves actionable content. Comments if it relates to their workflow.",
+      "scroll_past_triggers": ["too technical", "no clear takeaway", "generic advice"],
+      "interests": ["AI for PMs", "career growth", "frameworks", "product strategy"]
+    },
+    {
+      "role": "CTO / VP Engineering",
+      "count": 10,
+      "traits": ["selective", "high signal bar", "only engages with substance"],
+      "engagement_style": "Rarely comments. Reshares only high-signal content to their network.",
+      "scroll_past_triggers": ["junior-level content", "hype without data", "obvious insights"],
+      "interests": ["infrastructure", "team scaling", "architecture", "AI strategy"]
+    },
+    {
+      "role": "DevRel / Content Creator",
+      "count": 10,
+      "traits": ["amplifier", "reshares good stuff", "builds in public"],
+      "engagement_style": "Reshares with commentary. Quotes if they have a take.",
+      "scroll_past_triggers": ["boring", "nothing new", "too niche"],
+      "interests": ["open source", "developer tools", "AI", "community"]
+    },
+    {
+      "role": "Founder / Indie Hacker",
+      "count": 10,
+      "traits": ["action-oriented", "looking for tools", "time-scarce"],
+      "engagement_style": "Clicks links immediately. Clones repos. Shares if it saves them time.",
+      "scroll_past_triggers": ["theoretical", "no demo or link", "too long"],
+      "interests": ["shipping fast", "AI tools", "growth hacks", "open source"]
+    },
+    {
+      "role": "Junior Developer",
+      "count": 5,
+      "traits": ["learning-focused", "stars repos", "follows trends"],
+      "engagement_style": "Likes and stars. Rarely comments. Bookmarks for later.",
+      "scroll_past_triggers": ["too advanced", "assumes context they don't have"],
+      "interests": ["tutorials", "career advice", "trending tools", "AI basics"]
+    },
+    {
+      "role": "Recruiter",
+      "count": 5,
+      "traits": ["lurker", "scouts talent", "rarely engages publicly"],
+      "engagement_style": "Views profiles of commenters. Never comments publicly.",
+      "scroll_past_triggers": ["not relevant to hiring", "too technical"],
+      "interests": ["who's building what", "talent signals", "company culture"]
+    }
+  ],
+  "platform_rules": {
+    "max_post_length": 3000,
+    "tone": "professional but personal",
+    "what_works": ["authority", "frameworks", "I built X", "specific numbers", "story arc"],
+    "what_fails": ["generic advice", "no hook", "wall of text", "humble brag without substance"]
+  },
+  "scoring_weights": {
+    "comment": 5,
+    "share": 5,
+    "save": 2,
+    "click": 2,
+    "like": 1
+  }
+}

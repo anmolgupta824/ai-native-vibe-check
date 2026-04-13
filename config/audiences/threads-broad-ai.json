@@ -1,0 +1,76 @@
+{
+  "name": "Broad AI Threads Audience",
+  "platform": "threads",
+  "total_personas": 80,
+  "segments": [
+    {
+      "role": "Casual Tech Enthusiast",
+      "count": 20,
+      "traits": ["scrolls fast", "likes hot takes", "shares memes"],
+      "engagement_style": "Likes quickly. Shares if it's funny or surprising.",
+      "scroll_past_triggers": ["too professional", "boring", "long paragraphs"],
+      "interests": ["AI news", "tech drama", "gadgets", "memes"]
+    },
+    {
+      "role": "AI Curious Non-Tech",
+      "count": 15,
+      "traits": ["scared of AI", "wants simple explanations", "emotional reactions"],
+      "engagement_style": "Comments with questions or fears. Shares if it's relatable.",
+      "scroll_past_triggers": ["jargon", "assumes technical knowledge", "no human angle"],
+      "interests": ["AI impact on jobs", "simple AI tools", "ethics", "future predictions"]
+    },
+    {
+      "role": "Junior Dev / Student",
+      "count": 15,
+      "traits": ["learning", "impressionable", "follows trends"],
+      "engagement_style": "Likes and saves. Follows accounts that teach.",
+      "scroll_past_triggers": ["too advanced", "gatekeepy tone", "no actionable takeaway"],
+      "interests": ["tutorials", "free tools", "career advice", "trending tech"]
+    },
+    {
+      "role": "Content Creator / Meme Account",
+      "count": 10,
+      "traits": ["amplifier", "quote-threads everything", "high engagement"],
+      "engagement_style": "Quote-threads with hot take. Drives engagement through controversy.",
+      "scroll_past_triggers": ["mid take", "nothing to riff on", "too serious"],
+      "interests": ["viral content", "AI drama", "hot takes", "platform growth"]
+    },
+    {
+      "role": "Journalist / Writer",
+      "count": 10,
+      "traits": ["looking for stories", "fact-checks", "shares interesting angles"],
+      "engagement_style": "Saves for research. Comments if they have additional context.",
+      "scroll_past_triggers": ["unverified claims", "old news", "no new angle"],
+      "interests": ["AI policy", "tech industry", "startups", "data privacy"]
+    },
+    {
+      "role": "Indie Hacker",
+      "count": 5,
+      "traits": ["action-oriented", "clicks links", "builds in public"],
+      "engagement_style": "Clicks links. Tries tools immediately. Shares if useful.",
+      "scroll_past_triggers": ["all talk no link", "theoretical", "no demo"],
+      "interests": ["shipping fast", "AI tools", "growth", "open source"]
+    },
+    {
+      "role": "Skeptic / Troll",
+      "count": 5,
+      "traits": ["contrarian", "replies to disagree", "drives engagement"],
+      "engagement_style": "Replies with counterpoints. Nitpicks. Actually drives engagement.",
+      "scroll_past_triggers": ["boring consensus", "nothing to argue about"],
+      "interests": ["AI hype debunking", "tech criticism", "privacy", "open source vs corporate"]
+    }
+  ],
+  "platform_rules": {
+    "max_post_length": 500,
+    "tone": "casual, punchy, conversational",
+    "what_works": ["hot takes", "controversy", "humor", "relatable", "short punchy lines"],
+    "what_fails": ["too professional", "long paragraphs", "no personality", "boring"]
+  },
+  "scoring_weights": {
+    "comment": 3,
+    "share": 4,
+    "save": 1,
+    "click": 1,
+    "like": 4
+  }
+}

@@ -1,0 +1,11 @@
+hot take: if you're a PM and you're not using AI to write your PRDs, you're already behind
+
+I wrote a PRD generator that asks you 5 questions and spits out a full spec in 30 seconds
+
+no more blank page anxiety
+no more "I'll write it tomorrow"
+no more 3-hour PRD marathons
+
+the tool is free. link in bio.
+
+(yes, you still need to think. the AI just handles the formatting and structure so you can focus on the actual product decisions)

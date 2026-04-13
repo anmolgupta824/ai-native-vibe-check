@@ -1,0 +1,52 @@
+{
+  "models": {
+    "simulate": {
+      "model": "openai/gpt-4o-mini",
+      "description": "Persona scoring — runs 80-240 calls, needs to be cheap + fast",
+      "temperature": 0.7
+    },
+    "interview": {
+      "model": "openai/gpt-4o-mini",
+      "description": "Follow-up interviews — fewer calls. Override with --model openai/gpt-4o for deeper nuance.",
+      "temperature": 0.8
+    },
+    "persona_generation": {
+      "model": "anthropic/claude-sonnet-4",
+      "description": "One-time persona generation — needs creativity",
+      "temperature": 0.9
+    }
+  },
+  "presets": {
+    "free": {
+      "simulate": "qwen/qwen-2.5-72b-instruct:free",
+      "interview": "deepseek/deepseek-chat:free",
+      "persona_generation": "meta-llama/llama-3.3-70b-instruct:free"
+    },
+    "cheap": {
+      "simulate": "openai/gpt-4o-mini",
+      "interview": "openai/gpt-4o-mini",
+      "persona_generation": "openai/gpt-4o-mini"
+    },
+    "quality": {
+      "simulate": "openai/gpt-4o-mini",
+      "interview": "openai/gpt-4o",
+      "persona_generation": "anthropic/claude-4-sonnet"
+    },
+    "local": {
+      "simulate": "ollama/qwen2.5:32b",
+      "interview": "ollama/qwen2.5:32b",
+      "persona_generation": "ollama/qwen2.5:32b"
+    }
+  },
+  "max_concurrent": 20,
+  "rate_limit_rpm": 60,
+  "guardrails": {
+    "max_agents_per_run": 1000,
+    "max_posts_per_battle": 5,
+    "max_hooks_per_test": 5,
+    "max_interviews_per_run": 50,
+    "max_tokens_per_session": 500000,
+    "max_cost_per_session_usd": 1.00,
+    "warn_at_cost_usd": 0.50
+  }
+}
